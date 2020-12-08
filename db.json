@@ -1,0 +1,137 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "cars": [
+    {
+      "url": "car3.jpg",
+      "name": "Shelby",
+      "immatriculation": "99",
+      "puissance": "14 cv ",
+      "kilometrage": "150000",
+      "annee": "1990",
+      "prix": "1000000",
+      "quantity": 0,
+      "id": 2
+    },
+    {
+      "url": "car8.jpg",
+      "name": "Mercedes",
+      "immatriculation": "99",
+      "puissance": "4 cv",
+      "kilometrage": "100000",
+      "annee": "1940",
+      "prix": "400000",
+      "quantity": "1",
+      "id": 3
+    },
+    {
+      "url": "car2.jpg",
+      "name": "Porsche",
+      "immatriculation": "40",
+      "puissance": "7 cv",
+      "kilometrage": "3000",
+      "annee": "1958",
+      "prix": "400000",
+      "quantity": 1,
+      "id": 4
+    },
+    {
+      "url": "car6.jpg",
+      "name": "Porsche",
+      "immatriculation": "22",
+      "puissance": "6",
+      "kilometrage": "100000",
+      "annee": "1950",
+      "prix": "300000",
+      "quantity": "1",
+      "id": 5
+    }
+  ],
+  "users": [
+    {
+      "firstName": "rayen",
+      "lastName": "mechergui",
+      "userName": "rayen",
+      "emailAdress": "rayen",
+      "password": "44",
+      "confirmpassword": "44",
+      "id": 1
+    },
+    {
+      "firstName": "Rayen",
+      "lastName": "Mechergui",
+      "userName": "Rayen Mechergui",
+      "emailAdress": "rayen@esprit.tn",
+      "password": "22",
+      "confirmpassword": "22",
+      "id": 2
+    },
+    {
+      "firstName": "Rayen",
+      "lastName": "Mechergui",
+      "userName": "zzzz",
+      "emailAdress": "eeeee",
+      "id": 3
+    },
+    {
+      "firstName": "Rayen",
+      "lastName": "Mechergui",
+      "userName": "zzzz",
+      "emailAdress": "eeeee",
+      "id": 4
+    },
+    {
+      "firstName": "Rayen",
+      "lastName": "Mechergui",
+      "userName": "zzzz",
+      "emailAdress": "eeeee",
+      "password": "5555",
+      "confirmpassword": "5555",
+      "id": 5
+    },
+    {
+      "firstName": "Mechergui",
+      "lastName": "Rayen",
+      "userName": "Mechergui Rayen",
+      "emailAdress": "rayen.mechergui@esprit.tn",
+      "password": "111",
+      "confirmpassword": "111",
+      "id": 6
+    },
+    {
+      "url": "C:\\fakepath\\oldcar.jpg",
+      "firstName": "Rayen",
+      "lastName": "Mechergui",
+      "userName": "Rayen",
+      "emailAdress": "Mechergui",
+      "password": "444",
+      "confirmpassword": "444",
+      "id": 7
+    },
+    {
+      "url": "car3.jpg",
+      "firstName": "Rayen",
+      "lastName": "Mechergui",
+      "userName": "Rayen",
+      "emailAdress": "rayen",
+      "password": "444",
+      "confirmpassword": "444",
+      "id": 8
+    }
+  ]
+}

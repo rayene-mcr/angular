@@ -1,0 +1,72 @@
+<div class="allcontain">
+	<div class="header">
+			
+			<ul class="souklekraheb" >
+				<li>SOUK-LEKRAHEB</li>
+			</ul>
+			
+	</div>
+	<!-- Navbar Up -->
+	<nav class="topnavbar navbar-default topnav">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed toggle-costume" data-toggle="collapse" data-target="#upmenu" aria-expanded="false">
+					<span class="sr-only"> Toggle navigaion</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				
+			</div>	 
+		</div>
+		<div class="collapse navbar-collapse" id="upmenu">
+			<ul class="nav navbar-nav" id="navbarontop">
+				<li class="active"><a href="#" routerLink="/welcomeuser">HOME</a> </li>
+				<li>
+					<a href="#" routerLink="/viewuser">VIEW PRODUCTS</a>
+				</li>
+				<li>
+					<a routerLink="/postuser">POST A NEW CAR</a>
+				</li>
+				<li>
+					<a >CONTACT</a>
+ 
+				</li>
+				
+			</ul>
+		</div>
+	</nav>
+</div>
+<!--_______________________________________ Carousel__________________________________ -->
+<div class="allcontain">
+	<div id="carousel-up" class="carousel slide" data-ride="carousel">
+		<div class="carousel-inner " role="listbox">
+			<div class="item active">
+				<img src="/assets/image/oldcar.jpg" alt="oldcar">
+				<div class="carousel-caption">
+					<h2>Porsche 356</h2>
+					<p>The Old and Mythic Porsche 356 <br>
+						Starting Price : 200 000 000 TND </p>
+				</div>
+			</div>
+			<div class="item">
+				<img src="/assets/image/porche.jpg" alt="porche">
+				<div class="carousel-caption">
+					<h2>Porche Spyder</h2>
+						<p>Mythic Car,<br>
+						3 Millions de Dinars </p>
+				</div>
+			</div>
+			<div class="item">
+				<img src="/assets/image/benz.jpg" alt="benz">
+				<div class="carousel-caption">
+					<h2>Mercedes</h2>
+					<p>Mercedes SL Class Convertible <br>
+						150 900 00 TND </p>
+				</div>
+			</div>
+		</div>
+		<router-outlet></router-outlet>
+		
+
+

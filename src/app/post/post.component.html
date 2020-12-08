@@ -1,0 +1,86 @@
+<div class="allcontain">
+	<div class="header">
+			
+			<ul class="souklekraheb" >
+				<li>SOUK-LEKRAHEB</li>
+			</ul>
+			
+	</div>
+	<!-- Navbar Up -->
+	<nav class="topnavbar navbar-default topnav">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed toggle-costume" data-toggle="collapse" data-target="#upmenu" aria-expanded="false">
+					<span class="sr-only"> Toggle navigaion</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				
+			</div>	 
+		</div>
+		<div class="collapse navbar-collapse" id="upmenu">
+			<ul class="nav navbar-nav" id="navbarontop">
+				<li class="active"><a href="#" routerLink="/welcome">HOME</a> </li>
+				<li>
+					<a routerLink="/view">VIEW PRODUCTS</a>
+				</li>
+				<li>
+					<a routerLink="/post">POST A NEW CAR</a>
+				</li>
+				<li>
+					<a >CONTACT</a>
+ 
+				</li>
+				
+			</ul>
+		</div>
+	</nav>
+</div>
+<div class="container" style="justify-content: center;">
+<form #f="ngForm">
+    <div>
+        
+        <input type="file" name="image" (change)="handleFileInput($event.target.files)" [(ngModel)]="Cars.url"><br>
+    </div>
+    <div class="form-group">
+    <label> Name </label> <input type="text" name="name" [(ngModel)]="Cars.name" #n="ngModel" required  />
+    
+    <div class="alert alert-danger" *ngIf="n.touched && n.errors?.required">Car name is required </div>
+ </div>
+ <div class="form-group">
+ <label >Immatriculation </label> <input type="text" name="immatriculation" [(ngModel)]="Cars.immatriculation" #i="ngModel" required minlength="2" />
+ <div class="alert alert-danger" *ngIf="i.touched && i.errors?.required">Immatriculation obligatoire </div>
+ <div class="alert alert-danger" *ngIf="i.errors?.minlength">Minlength est 2</div>
+</div>
+ <div class="form-group">
+ <label >Puissance </label> <input type="text" name="puissance" [(ngModel)]="Cars.puissance" #p="ngModel" required />
+ <div class="alert alert-danger" *ngIf="p.touched && p.errors?.required ">Puissance Obligatoire </div>
+</div>
+<div class="form-group">
+ <label> Kilométrage </label>  <input type="text" name="quantity" [(ngModel)]="Cars.kilometrage"  #k="ngModel" required  />
+ <div class="alert alert-danger" *ngIf="k.touched && k.errors?.required ">Kilométrage Obligatoire </div>
+</div>
+<div class="form-group">
+ <label> Année </label>  <input type="text" name="annee" [(ngModel)]="Cars.annee" #a="ngModel" required />
+ <div class="alert alert-danger" *ngIf="a.touched && a.errors?.required ">Année Obligatoire </div>
+</div>
+<br>
+    <div>
+ <label>Prix </label>  <input type="text" name="price" [(ngModel)]="Cars.prix" #price="ngModel" required  />
+ <div class="alert alert-danger" *ngIf="price.touched && price.errors?.required">Price is Required</div>
+    </div>
+
+    <div>
+        <label>Quantity </label>  <input type="text" name="quanity" [(ngModel)]="Cars.quantity" #quanity="ngModel" required  />
+        <div class="alert alert-danger" *ngIf="quanity.touched && quanity.errors?.required">quanity is Required</div>
+    </div>
+
+ 
+ <button class="btn btn-warning"  [disabled]="f.invalid"  (click)="AddCar()" >Save</button>
+ </form>
+
+ <app-new-car [Cars]="Cars" [show]="show" (increment)=" IncrementQuantity($event)" (discrement)=" DiscrementQuaity($event)"></app-new-car>  
+ 
+                
+               

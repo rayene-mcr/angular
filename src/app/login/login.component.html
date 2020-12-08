@@ -1,0 +1,7 @@
+<br>
+Username <input type="text" #u1/> <br>
+Password <input type="password" #p2 /> 
+<button (click)="check(u1.value,p2.value)">LOGIN</button>
+<button (click)="submitLogin()" >Facebook Authentication</button>
+<span>{{msg}}</span>
+<router-outlet></router-outlet>

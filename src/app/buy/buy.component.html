@@ -1,0 +1,98 @@
+<div class="allcontain">
+	<div class="header">
+			
+			<ul class="souklekraheb" >
+				<li>SOUK-LEKRAHEB</li>
+			</ul>
+			
+	</div>
+	<!-- Navbar Up -->
+	<nav class="topnavbar navbar-default topnav">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed toggle-costume" data-toggle="collapse" data-target="#upmenu" aria-expanded="false">
+					<span class="sr-only"> Toggle navigaion</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				
+			</div>	 
+		</div>
+		<div class="collapse navbar-collapse" id="upmenu">
+			<ul class="nav navbar-nav" id="navbarontop">
+				<li class="active"><a href="#" routerLink="/welcome">HOME</a> </li>
+				<li>
+					<a routerLink="/viewuser">VIEW PRODUCTS</a>
+				</li>
+				<li>
+					<a routerLink="/postuser">POST A NEW CAR</a>
+				</li>
+				<li>
+					<a >CONTACT</a>
+ 
+				</li>
+				
+			</ul>
+		</div>
+	</nav>
+</div>
+<input type="text" placeholder="" class="form-control" name="carname" [(ngModel)]="c.name" #cc="ngModel">
+<div class="wrapper" style="background-image: url('assets/images/background.jpg');">
+    <div class="inner">
+        <div class="image-holder">
+            <img src="assets/images/key.jpg" alt="">
+        </div>
+            
+        <form [formGroup]="myForm">
+            <h3>Registration Form</h3>
+            
+            <svg width="1.0625em" height="1em" viewBox="0 0 17 16" class="bi bi-image-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M.002 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2V3zm1 9l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094L15.002 9.5V13a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1v-1zm5-6.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+              </svg><input type="file" name="image" (change)="handleFileInput($event.target.files)" [(ngModel)]="Infos.url"><br>
+            <div class="form-group">
+                <input type="text" placeholder="First Name" class="form-control" name="firstName" formControlName="firstName" [(ngModel)]="Infos.firstName" >
+                <input type="text" placeholder="Last Name" class="form-control" name="lastName" formControlName="lastName" [(ngModel)]="Infos.lastName" >
+            </div> 
+                <div>
+            <div class="alert alert-danger" *ngIf="firstNameUser.touched && firstNameUser.invalid">First Name Obligatoire</div>
+            <div class="alert alert-danger" *ngIf="lastNameUser.touched && lastNameUser.invalid">Last Name Obligatoire</div>
+                </div>
+            <div class="form-wrapper">
+                <input type="text" placeholder="C.i.n" class="form-control" name="cin" formControlName="cin" [(ngModel)]="Infos.cin" >
+                <!--div *ngIf="cinUser.touched && cinUser.errors.required">Numéro obligatoire</div>
+                <div *ngIf="cinUser.errors.pattern">JJJJ</div-->
+                    <div *ngIf="cinUser.touched && cinUser.errors?.required">Numéro obligatoire</div>
+                    <div *ngIf="cinUser.errors?.pattern">Le numéro de la carte doit comporter 8 chiffres</div>
+                <i class="zmdi zmdi-account"></i>
+            </div>
+            <div class="form-wrapper">
+                <input type="text" placeholder="Email Address" class="form-control" name="firstName" formControlName="emailAdress" [(ngModel)]="Infos.emailAdress" >
+                <div *ngIf="emailAdressUser.touched && emailAdressUser.errors?.required">Email obligatoire</div>
+            <div *ngIf="emailAdressUser.errors?.pattern">Vérifiez le formatdevotre e-mail</div>
+                <i class="zmdi zmdi-email"></i>
+            </div>
+            <!--div class="form-wrapper">
+                <select name="" id="list" class="form-control">
+                    <option value="" disabled selected>Gender</option>
+                    <option value="Infos.male" name="male" [(ngModel)]="Infos.male" #m="ngModel">Male</option>
+                    <option value="Infos.female" name="female" [(ngModel)]="Infos.female" #f="ngModel">Female</option>
+                </select>
+                <i class="zmdi zmdi-caret-down" style="font-size: 17px"></i>
+            </div-->
+            <div class="form-wrapper">
+                <input type="password" placeholder="Password" class="form-control" name="password" formControlName="password" [(ngModel)]="Infos.password" >
+                <div class="alert alert-danger" *ngIf="passwordUser.touched && passwordUser.invalid">Password Obligatoire</div>
+                <i class="zmdi zmdi-lock"></i>
+            </div>
+            <div class="form-wrapper">
+                <input type="password" placeholder="Confirm Password" class="form-control" name="confirm" formControlName="confirmpassword" [(ngModel)]="Infos.confirmpassword" >
+                <div class="alert alert-danger" *ngIf="confirmpasswordUser.touched && confirmpasswordUser.invalid">Vous devez confirmer votre mot de passe</div>
+                <i class="zmdi zmdi-lock"></i>
+            </div>
+            <button (click)="Register()">Register
+                <i class="zmdi zmdi-arrow-right"></i>
+            </button>
+        </form>
+    </div>
+</div>
