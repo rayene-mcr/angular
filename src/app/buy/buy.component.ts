@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrManager } from 'ng6-toastr-notifications';
+import { buyer } from '../model/buyer';
 import { cars } from '../model/Cars';
 import { infos } from '../model/infos';
 import { AppService } from '../shared/app.service';
@@ -11,43 +13,52 @@ import { AppService } from '../shared/app.service';
   styleUrls: ['./buy.component.css']
 })
 export class BuyComponent implements OnInit {
-  Infos : infos=new infos();
+  /*Infos : infos=new infos();
   listUsers:infos[];
+  searchCar : cars[];
   c:cars=new cars();
-  myForm : FormGroup;
+  myForm : FormGroup;*/
+  Buyer : buyer=new buyer();
+  listBuyers:buyer[];
+  searchCar : cars[];
+  c:cars=new cars();
+  myForm: FormGroup;
 
  
 
-  constructor(private ps:AppService ,private ac : ActivatedRoute) { }
+  constructor(private ps:AppService ,private ac : ActivatedRoute ,private routes: Router,private toastr:ToastrManager) { }
   fileToUpload: File = null;
- 
+
 
   ngOnInit(): void {this.myForm=new FormGroup({
-    firstName : new FormControl('',Validators.required),
-    lastName : new FormControl('',Validators.required),
+    username : new FormControl('',Validators.required),
+    carte : new FormControl('',Validators.required),
     cin: new FormControl('',[Validators.required,Validators.pattern("[0-9]{8}")]),
     emailAdress : new FormControl('',[Validators.required,Validators.pattern("[a-zA-Z]*[.][a-zA-Z]*[@][a-zA-Z]*[.][a-zA-Z]*")]),
-    gender: new FormControl('',Validators.required),
-    password : new FormControl('',Validators.required),
-    confirmpassword : new FormControl('',Validators.required)
+    adresse : new FormControl('',Validators.required),
+    ville : new FormControl('',Validators.required),
+    travail : new FormControl('',Validators.required)
   })
     this.ac.paramMap.subscribe(next=>this.ps.getCarByIdJson(+next.get('id')).subscribe(res=>this.c=res));
   }
 
-  handleFileInput(files: FileList) {
-    this.fileToUpload = files.item(0);
-  }
+ 
   Register(){
-    this.ps.addUser(this.Infos,this.fileToUpload).subscribe(next=>this.ps.getUersJson().subscribe(res=>this.listUsers=res));
+    this.ps.addBuyer(this.Buyer).subscribe(next=>this.ps.getBuyersJson().subscribe(res=>this.listBuyers=res));
+    this.ps.updateCar(this.c.id,this.c).subscribe(next=>this.ps.getCarsJson().subscribe(res=>this.searchCar=res));
+    this.toastr.successToastr('Achat effectué avec succès', 'Félicitations !');
+    this.c.quantity--;
+   
+    
   }
-  
-get firstNameUser() {return this.myForm.get('firstName');}
-get lastNameUser() {return this.myForm.get('lastName');}
+ 
+get usernameUser() {return this.myForm.get('username');}
+get carteUser() {return this.myForm.get('carte');}
 get cinUser() {return this.myForm.get('cin');}
 get emailAdressUser() {return this.myForm.get('emailAdress');}
-get genderUser() {return this.myForm.get('gender');}
-get passwordUser() {return this.myForm.get('password');}
-get confirmpasswordUser() {return this.myForm.get('confirmpassword');}  
+get adresseUser() {return this.myForm.get('adresse');}
+get villeUser() {return this.myForm.get('ville');}
+get travailUser() {return this.myForm.get('travail');}
 
 
 }

@@ -10,7 +10,7 @@ export class AuthGuard implements CanActivate, CanActivateChild, CanDeactivate<u
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): boolean {
-      if(localStorage.getItem('username')!=null){
+      if(localStorage.getItem('role')=="admin"){
     return true;
       }
       else{

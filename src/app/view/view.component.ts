@@ -29,7 +29,7 @@ listCars:cars[];
   none = { 'display' : 'none'}; 
 
   search(query : any){
-    this.searchCar = (query) ? this.tabcars.filter(car=>car.name.toLowerCase().includes(query.toLowerCase()) ||car.puissance.toLowerCase().includes(query.toLowerCase())) : this.tabcars;
+    this.searchCar = (query) ? this.tabcars.filter(car=>car.name.toLowerCase().includes(query.toLowerCase()) ||car.puissance.toLowerCase().includes(query.toLowerCase())||car.city.toLowerCase().includes(query.toLowerCase()) ) : this.tabcars;
   }
   delete(c:cars){
     this.ps.deleteCar(c).subscribe(next=>this.ps.getCarsJson().subscribe(res=>this.searchCar=res));

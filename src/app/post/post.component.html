@@ -29,7 +29,7 @@
 					<a routerLink="/post">POST A NEW CAR</a>
 				</li>
 				<li>
-					<a >CONTACT</a>
+					<a routerLink="/listofusers">VIEW USERS</a>
  
 				</li>
 				
@@ -37,50 +37,58 @@
 		</div>
 	</nav>
 </div>
+<div class="wrapper" style="background-image: url('assets/images/bmw.jpg');">
 <div class="container" style="justify-content: center;">
-<form #f="ngForm">
-    <div>
+	<form #f="ngForm">
+    			<div>
         
         <input type="file" name="image" (change)="handleFileInput($event.target.files)" [(ngModel)]="Cars.url"><br>
-    </div>
-    <div class="form-group">
-    <label> Name </label> <input type="text" name="name" [(ngModel)]="Cars.name" #n="ngModel" required  />
+    			</div>
+    		<div class="form-group">
+    <label style="color: white;"> Name </label> <input type="text" style="margin-left: 10px;" name="name" [(ngModel)]="Cars.name" #n="ngModel" required  />
     
-    <div class="alert alert-danger" *ngIf="n.touched && n.errors?.required">Car name is required </div>
+   			 <div class="alert alert-danger" *ngIf="n.touched && n.errors?.required">Car name is required </div>
  </div>
  <div class="form-group">
- <label >Immatriculation </label> <input type="text" name="immatriculation" [(ngModel)]="Cars.immatriculation" #i="ngModel" required minlength="2" />
+ <label style="color: white;" >Immatriculation </label> <input type="text" style="margin-left: 10px;" name="immatriculation" [(ngModel)]="Cars.immatriculation" #i="ngModel" required minlength="2" />
  <div class="alert alert-danger" *ngIf="i.touched && i.errors?.required">Immatriculation obligatoire </div>
  <div class="alert alert-danger" *ngIf="i.errors?.minlength">Minlength est 2</div>
 </div>
  <div class="form-group">
- <label >Puissance </label> <input type="text" name="puissance" [(ngModel)]="Cars.puissance" #p="ngModel" required />
+ <label  style="color: white;">Puissance </label> <input type="text" style="margin-left: 10px;" name="puissance" [(ngModel)]="Cars.puissance" #p="ngModel" required />
  <div class="alert alert-danger" *ngIf="p.touched && p.errors?.required ">Puissance Obligatoire </div>
 </div>
 <div class="form-group">
- <label> Kilométrage </label>  <input type="text" name="quantity" [(ngModel)]="Cars.kilometrage"  #k="ngModel" required  />
+ <label style="color: white;"> Kilométrage </label>  <input type="text" style="margin-left: 10px;" name="quantity" [(ngModel)]="Cars.kilometrage"  #k="ngModel" required  />
  <div class="alert alert-danger" *ngIf="k.touched && k.errors?.required ">Kilométrage Obligatoire </div>
 </div>
 <div class="form-group">
- <label> Année </label>  <input type="text" name="annee" [(ngModel)]="Cars.annee" #a="ngModel" required />
+ <label style="color: white;"> Année </label>  <input type="text" style="margin-left: 10px;" name="annee" [(ngModel)]="Cars.annee" #a="ngModel" required />
  <div class="alert alert-danger" *ngIf="a.touched && a.errors?.required ">Année Obligatoire </div>
 </div>
-<br>
     <div>
- <label>Prix </label>  <input type="text" name="price" [(ngModel)]="Cars.prix" #price="ngModel" required  />
+ <label style="color: white;">Prix :  </label>  <input type="text" style="margin-left: 10px;" name="price" [(ngModel)]="Cars.prix" #price="ngModel" required  />
  <div class="alert alert-danger" *ngIf="price.touched && price.errors?.required">Price is Required</div>
-    </div>
+	</div>
+	
+	<div>
+		<label style="color: white;">Lieu :  </label>  <input type="text" style="margin-left: 10px;margin-top: 10px;" name="city" [(ngModel)]="Cars.city" #city="ngModel" required  />
+		<div class="alert alert-danger" *ngIf="city.touched && city.errors?.required">City is Required</div>
+		   </div>
 
-    <div>
-        <label>Quantity </label>  <input type="text" name="quanity" [(ngModel)]="Cars.quantity" #quanity="ngModel" required  />
-        <div class="alert alert-danger" *ngIf="quanity.touched && quanity.errors?.required">quanity is Required</div>
+    <div style="padding-top: 8px;">
+        <label style="color: white;">Quantity  </label>  <input type="text" style="margin-left: 10px;" name="quanity" [(ngModel)]="Cars.quantity" #quanity="ngModel" required  />
+        <div class="alert alert-danger" *ngIf="quanity.touched && quanity.errors?.required">quantity is Required</div>
     </div>
 
  
  <button class="btn btn-warning"  [disabled]="f.invalid"  (click)="AddCar()" >Save</button>
  </form>
 
+
  <app-new-car [Cars]="Cars" [show]="show" (increment)=" IncrementQuantity($event)" (discrement)=" DiscrementQuaity($event)"></app-new-car>  
+</div>
+ 
  
                 
                

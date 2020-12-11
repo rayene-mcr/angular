@@ -20,6 +20,8 @@ import { WelcomeUserComponent } from './welcome-user/welcome-user.component';
 import { ViewuserComponent } from './viewuser/viewuser.component';
 import { ViewuserchildComponent } from './viewuserchild/viewuserchild.component';
 import { PostuserComponent } from './postuser/postuser.component';
+import { ListusersComponent } from './listusers/listusers.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 
@@ -36,7 +38,10 @@ import { PostuserComponent } from './postuser/postuser.component';
     WelcomeUserComponent,
     ViewuserComponent,
     ViewuserchildComponent,
-    PostuserComponent
+    PostuserComponent,
+    ListusersComponent,
+    SignupComponent
+
 
   ],
   imports: [

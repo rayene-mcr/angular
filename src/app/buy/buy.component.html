@@ -45,54 +45,50 @@
         </div>
             
         <form [formGroup]="myForm">
-            <h3>Registration Form</h3>
-            
-            <svg width="1.0625em" height="1em" viewBox="0 0 17 16" class="bi bi-image-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M.002 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2V3zm1 9l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094L15.002 9.5V13a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1v-1zm5-6.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
-              </svg><input type="file" name="image" (change)="handleFileInput($event.target.files)" [(ngModel)]="Infos.url"><br>
+            <h3>TYPE YOUR INFORMATIONS</h3>
             <div class="form-group">
-                <input type="text" placeholder="First Name" class="form-control" name="firstName" formControlName="firstName" [(ngModel)]="Infos.firstName" >
-                <input type="text" placeholder="Last Name" class="form-control" name="lastName" formControlName="lastName" [(ngModel)]="Infos.lastName" >
+                <input type="text" placeholder="username" class="form-control" name="username" formControlName="username" [(ngModel)]="Buyer.username" >
+                
             </div> 
                 <div>
-            <div class="alert alert-danger" *ngIf="firstNameUser.touched && firstNameUser.invalid">First Name Obligatoire</div>
-            <div class="alert alert-danger" *ngIf="lastNameUser.touched && lastNameUser.invalid">Last Name Obligatoire</div>
+            <div class="alert alert-danger" *ngIf="usernameUser.touched && usernameUser.invalid"> Vous devez insérer un username</div>
+                </div>
+                <div class="form-wrapper">
+                    <input type="text" placeholder="Carte Bancaire" class="form-control" name="carte" formControlName="carte" [(ngModel)]="Buyer.carte" >
+                        <div class="alert alert-danger" *ngIf="carteUser.touched && carteUser.errors?.required">Vous devez insérer le numéro de votre carte</div>
+                    <i class="zmdi zmdi-account"></i>
                 </div>
             <div class="form-wrapper">
-                <input type="text" placeholder="C.i.n" class="form-control" name="cin" formControlName="cin" [(ngModel)]="Infos.cin" >
-                <!--div *ngIf="cinUser.touched && cinUser.errors.required">Numéro obligatoire</div>
-                <div *ngIf="cinUser.errors.pattern">JJJJ</div-->
-                    <div *ngIf="cinUser.touched && cinUser.errors?.required">Numéro obligatoire</div>
-                    <div *ngIf="cinUser.errors?.pattern">Le numéro de la carte doit comporter 8 chiffres</div>
+                <input type="text" placeholder="C.i.n" class="form-control" name="cin" formControlName="cin" [(ngModel)]="Buyer.cin" >
+                    <div class="alert alert-danger" *ngIf="cinUser.touched && cinUser.errors?.required">Numéro obligatoire</div>
+                    <div class="alert alert-danger" *ngIf="cinUser.errors?.pattern">Le numéro de la carte doit comporter 8 chiffres</div>
                 <i class="zmdi zmdi-account"></i>
             </div>
             <div class="form-wrapper">
-                <input type="text" placeholder="Email Address" class="form-control" name="firstName" formControlName="emailAdress" [(ngModel)]="Infos.emailAdress" >
-                <div *ngIf="emailAdressUser.touched && emailAdressUser.errors?.required">Email obligatoire</div>
-            <div *ngIf="emailAdressUser.errors?.pattern">Vérifiez le formatdevotre e-mail</div>
+                <input type="text" placeholder="Email Address" class="form-control" name="emailAdress" formControlName="emailAdress" [(ngModel)]="Buyer.emailAdress" >
+                <div class="alert alert-danger" *ngIf="emailAdressUser.touched && emailAdressUser.errors?.required">Email obligatoire</div>
+            <div class="alert alert-danger" *ngIf="emailAdressUser.errors?.pattern">Vérifiez le formatdevotre e-mail</div>
                 <i class="zmdi zmdi-email"></i>
             </div>
-            <!--div class="form-wrapper">
-                <select name="" id="list" class="form-control">
-                    <option value="" disabled selected>Gender</option>
-                    <option value="Infos.male" name="male" [(ngModel)]="Infos.male" #m="ngModel">Male</option>
-                    <option value="Infos.female" name="female" [(ngModel)]="Infos.female" #f="ngModel">Female</option>
-                </select>
-                <i class="zmdi zmdi-caret-down" style="font-size: 17px"></i>
-            </div-->
             <div class="form-wrapper">
-                <input type="password" placeholder="Password" class="form-control" name="password" formControlName="password" [(ngModel)]="Infos.password" >
-                <div class="alert alert-danger" *ngIf="passwordUser.touched && passwordUser.invalid">Password Obligatoire</div>
+                <input type="text" placeholder="Adresse" class="form-control" name="adresse" formControlName="adresse" [(ngModel)]="Buyer.adresse" >
+                <div class="alert alert-danger" *ngIf="adresseUser.touched && adresseUser.invalid">Vous devez insérer votre adresse</div>
                 <i class="zmdi zmdi-lock"></i>
             </div>
             <div class="form-wrapper">
-                <input type="password" placeholder="Confirm Password" class="form-control" name="confirm" formControlName="confirmpassword" [(ngModel)]="Infos.confirmpassword" >
-                <div class="alert alert-danger" *ngIf="confirmpasswordUser.touched && confirmpasswordUser.invalid">Vous devez confirmer votre mot de passe</div>
+                <input type="text" placeholder="Ville" class="form-control" name="ville" formControlName="ville" [(ngModel)]="Buyer.ville" >
+                <div class="alert alert-danger" *ngIf="villeUser.touched && villeUser.invalid">Vous devez insérer votre ville</div>
                 <i class="zmdi zmdi-lock"></i>
             </div>
-            <button (click)="Register()">Register
+            <div class="form-wrapper">
+                <input type="text" placeholder="Travail" class="form-control" name="travail" formControlName="travail" [(ngModel)]="Buyer.Travail" >
+                <div class="alert alert-danger" *ngIf="travailUser.touched && travailUser.invalid">Vous devez insérer le nom de votre travail </div>
+                <i class="zmdi zmdi-lock"></i>
+            </div>
+            <button  (click)="Register()">Register
                 <i class="zmdi zmdi-arrow-right"></i>
             </button>
         </form>
     </div>
 </div>
+<router-outlet></router-outlet>

@@ -29,59 +29,26 @@
 					<a routerLink="/post">POST A NEW CAR</a>
 				</li>
 				<li>
-					<a >CONTACT</a>
+					<a routerLink="/listofusers">VIEW USERS</a>
  
 				</li>
 				
 			</ul>
 		</div>
 	</nav>
-</div>
-<!--input #query (keyup)="search(query.value)" type="text" class="form-control" placeholder="Search...">
-<div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-around;">
-<div *ngFor="let c of searchCar">
-    <!--div class="feturedimage"-->
-     <!--div class="row firstrow"-->
-         <!--div class="col-lg-6 costumcol colborder1"-->
-             <!--div class="row costumrow"-->
-                 <!--div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 img1colon" style="width: 300px;">
-                     <img src="/assets/image/featurporch.jpg" alt="porsche"-->
-                 <!--/div>
-                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 txt1colon ">
-                     <div class="featurecontant">
-                         <h1>{{c.name}}</h1>
-                         <h2><img src="/assets/image/{{c.url}}" style="width: 240px; height: 300px;"/></h2>
-                         <p>{{c.immatriculation}}<br>
-                             {{c.puissance}} <br>
-                             {{c.kilometrage}} <br>
-							 {{c.annee}}
-							 {{c.quantity}}
-                                   </p>
-                          <h2>{{c.prix}} &euro;</h2>
-                          <button id="btnRM" (click)="delete(c)">DELETE</button>
-                          <button [routerLink]="['/updatecars',c.id]" id="btnRM" onclick="rmtxt()">EDIT</button>
-						  <button id="btnRM" onclick="rmtxt()">BUY</button>
-						 
-                     </div>
-                 </div>
-             </div-->
-         <!--/div-->
-         
-                     <!--/div-->
-                 <!--/div-->
-             <!--/div>
-			</div-->
+</div>		
+			
 			<input #query (keyup)="search(query.value)" type="text" class="form-control" placeholder="Search...">
 
-							<div class="container" style="display: flex; flex-wrap: wrap;" >	
-								<div *ngFor="let c of searchCar">	
-								<div class="feturedimage" style="width: 500px; display: flex;justify-content: space-around;">
-									<div class="row firstrow">
-										<div class="col-lg-6 costumcol colborder1" style="width: 500px; display: flex;justify-content: space-around;">
-											<div class="row costumrow" style="width: 500px; display: flex;justify-content: space-around;" >
-												<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 img1colon" >
-													<img src="/assets/image/{{c.url}}" alt="CarPic" style="height: fit-content; ">
-												</div>
+			<div class="container" style="display: flex; flex-wrap: wrap;" >	
+				<div *ngFor="let c of searchCar" style="margin-top: 16px;margin-left: 20px;">	
+				<div class="feturedimage" style="width: 500px; display: flex;justify-content: space-around;">
+					<div class="row firstrow">
+						<div class="col-lg-6 costumcol colborder1" style="width: 500px; display: flex;justify-content: space-around;">
+							<div class="row costumrow" style="width: 500px; display: flex;justify-content: space-around;" >
+								<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 img1colon" >
+									<img src="/assets/image/{{c.url}}" alt="CarPic" style="height: fit-content;margin-top: 19px; ">
+								</div>
 												<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 txt1colon ">
 													<div class="featurecontant">
 														<h1>{{c.name}}</h1>
@@ -89,6 +56,7 @@
 														Puissance :	{{c.puissance}} <br>Kilometrage :{{c.kilometrage}} <br>
 														Année :	{{c.annee}}<br>
 														Quantité :	{{c.quantity}} <br>
+														Lieu :	{{c.city}} <br>
 														 		
 														 Price {{c.prix}} &euro;</p>
 														 <button class="btn btn-dark" (click)="delete(c)">DELETE <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-folder-x" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

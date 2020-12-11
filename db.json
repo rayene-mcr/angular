@@ -18,17 +18,6 @@
   },
   "cars": [
     {
-      "url": "car3.jpg",
-      "name": "Shelby",
-      "immatriculation": "99",
-      "puissance": "14 cv ",
-      "kilometrage": "150000",
-      "annee": "1990",
-      "prix": "1000000",
-      "quantity": 0,
-      "id": 2
-    },
-    {
       "url": "car8.jpg",
       "name": "Mercedes",
       "immatriculation": "99",
@@ -36,7 +25,8 @@
       "kilometrage": "100000",
       "annee": "1940",
       "prix": "400000",
-      "quantity": "1",
+      "city": "Sousse",
+      "quantity": 0,
       "id": 3
     },
     {
@@ -47,91 +37,71 @@
       "kilometrage": "3000",
       "annee": "1958",
       "prix": "400000",
+      "city": "Jendouba",
       "quantity": 1,
       "id": 4
     },
     {
+      "url": "car7.jpg",
+      "name": "Aston Martin",
+      "immatriculation": "100",
+      "puissance": "6 cv",
+      "kilometrage": "100000",
+      "annee": "2004",
+      "prix": "1000000",
+      "city": "Jendouba",
+      "quantity": "1",
+      "id": 6
+    },
+    {
       "url": "car6.jpg",
       "name": "Porsche",
-      "immatriculation": "22",
-      "puissance": "6",
-      "kilometrage": "100000",
-      "annee": "1950",
-      "prix": "300000",
-      "quantity": "1",
-      "id": 5
+      "immatriculation": "60",
+      "puissance": "10cv",
+      "kilometrage": "120000",
+      "annee": "1999",
+      "prix": "1500000",
+      "city": "Tunis",
+      "quantity": "0",
+      "id": 7
     }
   ],
   "users": [
     {
-      "firstName": "rayen",
-      "lastName": "mechergui",
-      "userName": "rayen",
-      "emailAdress": "rayen",
-      "password": "44",
-      "confirmpassword": "44",
-      "id": 1
-    },
-    {
       "firstName": "Rayen",
       "lastName": "Mechergui",
-      "userName": "Rayen Mechergui",
-      "emailAdress": "rayen@esprit.tn",
-      "password": "22",
-      "confirmpassword": "22",
-      "id": 2
-    },
-    {
-      "firstName": "Rayen",
-      "lastName": "Mechergui",
-      "userName": "zzzz",
-      "emailAdress": "eeeee",
+      "username": "Rayen Mechergui",
+      "cin": "07991942",
+      "emailAdress": "rayen.mechergui@esprit.tn",
+      "password": "0000",
+      "confirmpassword": "0000",
+      "role": "admin",
+      "url": "ryn.png",
       "id": 3
     },
     {
-      "firstName": "Rayen",
+      "firstName": "Haythem",
       "lastName": "Mechergui",
-      "userName": "zzzz",
-      "emailAdress": "eeeee",
+      "username": "Haythem Mechergui",
+      "cin": "02554882",
+      "emailAdress": "haythem.mechergui@esprit.tn",
+      "password": "0000",
+      "confirmpassword": "0000",
+      "role": "user",
+      "url": "haythem.png",
       "id": 4
-    },
+    }
+  ],
+  "buyers": [
     {
-      "firstName": "Rayen",
-      "lastName": "Mechergui",
-      "userName": "zzzz",
-      "emailAdress": "eeeee",
-      "password": "5555",
-      "confirmpassword": "5555",
-      "id": 5
-    },
-    {
-      "firstName": "Mechergui",
-      "lastName": "Rayen",
-      "userName": "Mechergui Rayen",
+      "username": "Mechergui Rachid",
+      "carte": "6588582",
+      "cin": "07888545",
       "emailAdress": "rayen.mechergui@esprit.tn",
-      "password": "111",
-      "confirmpassword": "111",
-      "id": 6
-    },
-    {
-      "url": "C:\\fakepath\\oldcar.jpg",
-      "firstName": "Rayen",
-      "lastName": "Mechergui",
-      "userName": "Rayen",
-      "emailAdress": "Mechergui",
-      "password": "444",
-      "confirmpassword": "444",
-      "id": 7
-    },
-    {
-      "url": "car3.jpg",
-      "firstName": "Rayen",
-      "lastName": "Mechergui",
-      "userName": "Rayen",
-      "emailAdress": "rayen",
-      "password": "444",
-      "confirmpassword": "444",
-      "id": 8
+      "adresse": "Jiji",
+      "ville": "Jendouba",
+      "Travail": "Avocat",
+      "id": 1
     }
   ]
 }

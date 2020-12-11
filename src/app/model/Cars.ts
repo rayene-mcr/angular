@@ -9,4 +9,5 @@ export class cars{
     prix : number ;
     likes:number;
     quantity:number;
+    city :String;
 }
