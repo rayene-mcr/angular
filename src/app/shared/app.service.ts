@@ -77,15 +77,6 @@ export class AppService {
                     return this.http.delete<infos>(url);
                     }
 
-                   /* addUser(Infos : infos,FileToUpload :File):Observable<infos>{
-                      Infos.url=FileToUpload.name;
-                      return this.http.post<infos>(this.urlUsers,Infos);
-                    }
-        
-                    getUersJson():Observable<infos[]>{
-            
-                      return this.http.get<infos[]>(this.urlUsers);
-                          }*/
                           addBuyer(Buyer : buyer):Observable<buyer>{
                             return this.http.post<buyer>(this.urlBuyers,Buyer);
                           }

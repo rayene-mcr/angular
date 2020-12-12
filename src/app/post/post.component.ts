@@ -48,13 +48,13 @@ export class PostComponent implements OnInit {
   IncrementQuantity(car:cars)
   { 
     car.quantity++;
-    this.ps.updateCar(car.quantity,car).subscribe();
+    this.ps.updateCar(car.id,car).subscribe();
   }
 
   DiscrementQuaity(car:cars)
   {
     car.quantity--;
-    this.ps.updateCar(car.quantity,car).subscribe();
+    this.ps.updateCar(car.id,car).subscribe();
   }
 
 

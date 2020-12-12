@@ -18,18 +18,6 @@
   },
   "cars": [
     {
-      "url": "car8.jpg",
-      "name": "Mercedes",
-      "immatriculation": "99",
-      "puissance": "4 cv",
-      "kilometrage": "100000",
-      "annee": "1940",
-      "prix": "400000",
-      "city": "Sousse",
-      "quantity": 0,
-      "id": 3
-    },
-    {
       "url": "car2.jpg",
       "name": "Porsche",
       "immatriculation": "40",
@@ -38,7 +26,7 @@
       "annee": "1958",
       "prix": "400000",
       "city": "Jendouba",
-      "quantity": 1,
+      "quantity": 0,
       "id": 4
     },
     {
@@ -50,7 +38,7 @@
       "annee": "2004",
       "prix": "1000000",
       "city": "Jendouba",
-      "quantity": "1",
+      "quantity": 0,
       "id": 6
     },
     {
@@ -64,6 +52,54 @@
       "city": "Tunis",
       "quantity": "0",
       "id": 7
+    },
+    {
+      "url": "car4.jpg",
+      "name": "Mercedes",
+      "immatriculation": "77",
+      "puissance": "6 cv ",
+      "kilometrage": "1000000",
+      "annee": "1687",
+      "prix": "100000",
+      "city": "Sfax",
+      "quantity": "1",
+      "id": 8
+    },
+    {
+      "url": "car5.jpg",
+      "name": "Porsche",
+      "immatriculation": "56",
+      "puissance": "5 cv",
+      "kilometrage": "500000",
+      "annee": "1564",
+      "prix": "1000000",
+      "city": "Tunis",
+      "quantity": "2",
+      "id": 9
+    },
+    {
+      "url": "car8.jpg",
+      "name": "othtst",
+      "immatriculation": "45",
+      "puissance": "44",
+      "kilometrage": "55",
+      "annee": "455",
+      "prix": "4",
+      "city": "Lee",
+      "quantity": "1",
+      "id": 11
+    },
+    {
+      "url": "car8.jpg",
+      "name": "BMW",
+      "immatriculation": "153",
+      "puissance": "7",
+      "kilometrage": "5",
+      "annee": "2020",
+      "prix": "90 000",
+      "city": "jiji",
+      "quantity": "1",
+      "id": 13
     }
   ],
   "users": [
@@ -82,7 +118,7 @@
     {
       "firstName": "Haythem",
       "lastName": "Mechergui",
-      "username": "Haythem Mechergui",
+      "username": "ts",
       "cin": "02554882",
       "emailAdress": "haythem.mechergui@esprit.tn",
       "password": "0000",
@@ -94,7 +130,7 @@
   ],
   "buyers": [
     {
-      "username": "Mechergui Rachid",
+      "username": "tss",
       "carte": "6588582",
       "cin": "07888545",
       "emailAdress": "rayen.mechergui@esprit.tn",
@@ -102,6 +138,40 @@
       "ville": "Jendouba",
       "Travail": "Avocat",
       "id": 1
+    },
+    {
+      "username": "Rayen Mechergui",
+      "carte": "58555",
+      "cin": "07335645",
+      "emailAdress": "rayen.mechergui@esprit.tn",
+      "adresse": "kkkk",
+      "ville": "zzzz",
+      "Travail": "Etudiant",
+      "id": 2
+    },
+    {
+      "username": "Haythem Mechergui",
+      "carte": "58555",
+      "cin": "07991942",
+      "emailAdress": "rayen.mechergui@esprit.tn",
+      "adresse": "Jiji",
+      "ville": "Jendouba",
+      "Travail": "Etudiant",
+      "id": 3
+    },
+    {
+      "username": "test",
+      "id": 4
+    },
+    {
+      "username": "test",
+      "carte": "58555",
+      "cin": "07991942",
+      "emailAdress": "rayen.mechergui@esprit.tn",
+      "adresse": "kkkk",
+      "ville": "zzzze",
+      "Travail": "Avocat",
+      "id": 5
     }
   ]
 }

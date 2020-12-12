@@ -52,7 +52,7 @@
                     <div class="alert alert-danger" *ngIf="roleUser.touched && roleUser.invalid">Vous devez vérifier le role </div>
                     <i class="zmdi zmdi-lock"></i>
                 </div>
-                <button  (click)="Register()">Register
+                <button  (click)="save()" [disabled]="myForm.invalid">Register
                     <i class="zmdi zmdi-arrow-right"></i>
                 </button>
             </form>

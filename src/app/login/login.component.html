@@ -70,7 +70,7 @@ Password <input type="password" #p2 />
                 <img src="assets/images/bg-01.jpg" alt="">
             </div>
                 
-            <form >
+            <form #f="ngForm" >
                 <h3>Account login</h3>
                 <div class="wrap-input100 rs1-wrap-input100 validate-input m-b-20" data-validate="Type user name">
                     <input type="text" placeholder="First Name" class="form-control" name="firstName" placeholder="User name" [(ngModel)]="Infos.username"  #u1="ngModel" required >
@@ -83,7 +83,7 @@ Password <input type="password" #p2 />
                     <span class="focus-input100"></span>
                 </div>
                 <div class="container-login100-form-btn">
-                    <button class="login100-form-btn" (click)="check(u1.value,p2.value)">
+                    <button class="login100-form-btn" (click)="check(u1.value,p2.value)" [disabled]="f.invalid">
                         Sign in
                     </button>
                     <h4 style="padding-top: 10px;margin-left: 147px;">Or</h4>
@@ -91,7 +91,7 @@ Password <input type="password" #p2 />
                         Connect with facebook
                     </button>
                     <h4 style="padding-top: 10px;margin-left: 90px;color:goldenrod">Not a member ?</h4>
-                    <button class="login100-form-btn" style="color: goldenrod;" (click)="signup()" >
+                    <button class="login100-form-btn"  style="color: goldenrod;" (click)="signup()" >
                         Sign up
                     </button>
                 </div>

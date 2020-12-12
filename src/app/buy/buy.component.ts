@@ -13,16 +13,18 @@ import { AppService } from '../shared/app.service';
   styleUrls: ['./buy.component.css']
 })
 export class BuyComponent implements OnInit {
-  /*Infos : infos=new infos();
+  
+
+  
+  Buyer : buyer=new buyer();
+  listBuyers:buyer[];
+  myForm: FormGroup;
+
+  Infos : infos=new infos();
   listUsers:infos[];
   searchCar : cars[];
   c:cars=new cars();
-  myForm : FormGroup;*/
-  Buyer : buyer=new buyer();
-  listBuyers:buyer[];
-  searchCar : cars[];
-  c:cars=new cars();
-  myForm: FormGroup;
+ 
 
  
 
@@ -45,12 +47,16 @@ export class BuyComponent implements OnInit {
  
   Register(){
     this.ps.addBuyer(this.Buyer).subscribe(next=>this.ps.getBuyersJson().subscribe(res=>this.listBuyers=res));
+    this.c.quantity--;
     this.ps.updateCar(this.c.id,this.c).subscribe(next=>this.ps.getCarsJson().subscribe(res=>this.searchCar=res));
     this.toastr.successToastr('Achat effectué avec succès', 'Félicitations !');
-    this.c.quantity--;
    
     
   }
+  /*this.ps.addUser(this.Infos,this.fileToUpload).subscribe(next=>this.ps.getUersJson().subscribe(res=>this.listUsers=res));
+  this.ps.updateCar(this.c.id,this.c).subscribe(next=>this.ps.getCarsJson().subscribe(res=>this.searchCar=res));
+  this.routes.navigate(['/viewuser']);
+  this.c.quantity--;*/
  
 get usernameUser() {return this.myForm.get('username');}
 get carteUser() {return this.myForm.get('carte');}

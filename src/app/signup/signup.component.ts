@@ -40,12 +40,13 @@ export class SignupComponent implements OnInit {
   handleFileInput(files: FileList) {
     this.fileToUpload = files.item(0);
   }
-  Register(){
-    this.ps.addUser(this.Infos,this.fileToUpload).subscribe(next=>this.ps.getUersJson().subscribe(res=>this.listUsers=res));
-    this.ps.updateCar(this.c.id,this.c).subscribe(next=>this.ps.getCarsJson().subscribe(res=>this.searchCar=res));
-    this.routes.navigate(['/login']);
-    this.c.quantity--;
+  save(){
+    this.ps.addUser(this.Infos,this.fileToUpload).subscribe(next=>this.ps.getUersJson().subscribe(res=>
+    this.listUsers=res));
    
+    
+    this.routes.navigate(['/login']);
+
     
   }
   

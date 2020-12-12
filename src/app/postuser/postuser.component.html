@@ -82,7 +82,7 @@
 		</div>
 	
 	 
-	 <button class="btn btn-warning"  [disabled]="f.invalid"  (click)="AddCar()" >Save</button>
+	 <button class="btn btn-warning"  [disabled]="f.invalid"  (click)="AddCar()" [disabled]="f.invalid" >Save</button>
 	 </form>
 	
  <app-new-car [Cars]="Cars" [show]="show" (increment)=" IncrementQuantity($event)" (discrement)=" DiscrementQuaity($event)"></app-new-car>  

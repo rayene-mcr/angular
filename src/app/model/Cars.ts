@@ -3,7 +3,7 @@ export class cars{
     url:string;
     name : string ;
     immatriculation : number;
-    puissance : string;
+    puissance : number;
     kilometrage : number;
     annee : number;
     prix : number ;
