@@ -46,17 +46,13 @@ export class BuyComponent implements OnInit {
 
  
   Register(){
-    this.ps.addBuyer(this.Buyer).subscribe(next=>this.ps.getBuyersJson().subscribe(res=>this.listBuyers=res));
+    this.ps.addBuyer(this.Buyer).subscribe();
     this.c.quantity--;
     this.ps.updateCar(this.c.id,this.c).subscribe(next=>this.ps.getCarsJson().subscribe(res=>this.searchCar=res));
     this.toastr.successToastr('Achat effectué avec succès', 'Félicitations !');
    
     
   }
-  /*this.ps.addUser(this.Infos,this.fileToUpload).subscribe(next=>this.ps.getUersJson().subscribe(res=>this.listUsers=res));
-  this.ps.updateCar(this.c.id,this.c).subscribe(next=>this.ps.getCarsJson().subscribe(res=>this.searchCar=res));
-  this.routes.navigate(['/viewuser']);
-  this.c.quantity--;*/
  
 get usernameUser() {return this.myForm.get('username');}
 get carteUser() {return this.myForm.get('carte');}

@@ -32,7 +32,7 @@ export class ListusersComponent implements OnInit {
   
 
   delete(i:infos){
-    this.ps.deleteUser(i).subscribe(next=>this.ps.getUersJson().subscribe(res=>this.listUsers=res));
+    this.ps.deleteUser(i).subscribe(next=>this.ps.getUersJson().subscribe(res=>this.ps.getUersJson().subscribe(res=>this.searchUser=res)));
   }
  
   }

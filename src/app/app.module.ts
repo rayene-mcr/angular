@@ -25,6 +25,7 @@ import { SignupComponent } from './signup/signup.component';
 import { ContactComponent } from './contact/contact.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
@@ -46,7 +47,8 @@ import { NotfoundComponent } from './notfound/notfound.component';
     SignupComponent,
     ContactComponent,
     FeedbackComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    ProfileComponent
 
 
   ],

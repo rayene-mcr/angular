@@ -53,15 +53,7 @@ export class AppService {
     
               return this.http.get<infos[]>(this.urlUsers);
                   }
-                  checkusernameandpassword(uname:string,pwd:string){
-                    if(uname =="admin" && pwd=="admin123"){
-                      localStorage.setItem('username',"admin");
-                      return true;
-                    }
-                    else {
-                      return false;
-                    }
-                  }
+                  
 
                   checkothernameandpassword(uname:string,pwd:string){
                     if(uname =="user" && pwd=="user123"){
@@ -91,5 +83,10 @@ export class AppService {
                   
                             return this.http.get<infos[]>(this.urlMail);
                                 }
+                                getUsersByIdJson(id: number): Observable<infos>
+                                {
+                                  return this.http.get<infos>(this.urlUsers +'/'+ id);
+                                }
+                                  
                   
 }

@@ -27,14 +27,14 @@
                     </div>
                 <div class="form-wrapper">
                     <input type="text" placeholder="C.i.n" class="form-control" name="cin" formControlName="cin" [(ngModel)]="Infos.cin" >
-                        <div *ngIf="cinUser.touched && cinUser.errors?.required">Numéro obligatoire</div>
-                        <div *ngIf="cinUser.errors?.pattern">Le numéro de la carte doit comporter 8 chiffres</div>
+                        <div class="alert alert-danger" *ngIf="cinUser.touched && cinUser.errors?.required">Numéro obligatoire</div>
+                        <div class="alert alert-danger" *ngIf="cinUser.errors?.pattern">Le numéro de la carte doit comporter 8 chiffres</div>
                     <i class="zmdi zmdi-account"></i>
                 </div>
                 <div class="form-wrapper">
                     <input type="text" placeholder="Email Address" class="form-control" name="firstName" formControlName="emailAdress" [(ngModel)]="Infos.emailAdress" >
-                    <div *ngIf="emailAdressUser.touched && emailAdressUser.errors?.required">Email obligatoire</div>
-                <div *ngIf="emailAdressUser.errors?.pattern">Vérifiez le formatdevotre e-mail</div>
+                    <div class="alert alert-danger" *ngIf="emailAdressUser.touched && emailAdressUser.errors?.required">Email obligatoire</div>
+                <div class="alert alert-danger" *ngIf="emailAdressUser.errors?.pattern">Vérifiez le formatdevotre e-mail</div>
                     <i class="zmdi zmdi-email"></i>
                 </div>
                 <div class="form-wrapper">

@@ -35,18 +35,7 @@ msg;
        fjs.parentNode.insertBefore(js, fjs);
      }(document, 'script', 'facebook-jssdk'));
   }
-  /*check(uname:string , p :string){
-    var output = this.ps.checkusernameandpassword(uname,p);
-    var otheroutput=this.ps.checkothernameandpassword(uname,p);
-    if(output == true) {
-      this.routes.navigate(['/welcome']);
-    } else if (otheroutput ==true){
-      this.routes.navigate(['/welcomeuser']);
-    }
-    else {
-      this.msg='Invalid username or password'
-    }
-  }*/
+  
   check(uname:string , p:string){
     this.ps.getUersJson().subscribe(res=>{
       for (let i in res){
@@ -56,6 +45,7 @@ msg;
           this.routes.navigate(['/welcome']);
         }
         else if(uname ==res[i].username && p==res[i].password && res[i].role=="user"){
+          localStorage.setItem('id',res[i].id.toString());
           this.toastr.successToastr('login successful', 'Success!');
           this.routes.navigate(['/welcomeuser']);
 

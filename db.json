@@ -62,7 +62,7 @@
       "annee": "2019",
       "prix": "70000",
       "city": "Tunis",
-      "quantity": "1",
+      "quantity": 0,
       "id": 10
     },
     {
@@ -86,7 +86,7 @@
       "annee": "2011",
       "prix": "250000",
       "city": "Jendouba",
-      "quantity": "1",
+      "quantity": 0,
       "id": 12
     },
     {
@@ -124,6 +124,18 @@
       "city": "Hammamet",
       "quantity": "1",
       "id": 15
+    },
+    {
+      "url": "car3.jpg",
+      "name": "Shelby",
+      "immatriculation": "4555",
+      "puissance": "5",
+      "kilometrage": "2000000",
+      "annee": "1990",
+      "prix": "1000000",
+      "city": "Tunis",
+      "quantity": "1",
+      "id": 16
     }
   ],
   "users": [
@@ -244,6 +256,16 @@
       "ville": "zzzze",
       "Travail": "Avocat",
       "id": 5
+    },
+    {
+      "username": "Mohamed Ayadi",
+      "carte": "0556146",
+      "cin": "21566885",
+      "emailAdress": "rayen.mechergui@esprit.tn",
+      "adresse": "Cite nour",
+      "ville": "Tunis",
+      "Travail": "Enseignant",
+      "id": 6
     }
   ],
   "mail": [
@@ -267,6 +289,13 @@
       "subject": "Opinion",
       "mail": "I Really like your products , i'm looking forward to buy one of these cars !",
       "id": 5
+    },
+    {
+      "username": "Test Angular",
+      "emailAdress": "Test.angular@esprit.tn",
+      "subject": "AVIS",
+      "mail": "ICI C'EST LE TEST DU FONCTIONNEMENT DU WORSHOP D'ANGULAR",
+      "id": 6
     }
   ]
 }
