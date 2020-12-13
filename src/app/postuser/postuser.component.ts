@@ -36,11 +36,7 @@ export class PostuserComponent implements OnInit {
     this.Carlst=list;
       }
 
-      /*Like(i:number){
-        this.Carlst[i].likes +=1;
-        this.liked.emit();
-      }*/
-
+    
   IncrementQuantity(car:cars)
   { 
     car.quantity++;
