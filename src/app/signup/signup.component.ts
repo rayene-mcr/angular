@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrManager } from 'ng6-toastr-notifications';
 import { cars } from '../model/Cars';
 import { infos } from '../model/infos';
 import { AppService } from '../shared/app.service';
@@ -20,7 +21,7 @@ export class SignupComponent implements OnInit {
 
  
 
-  constructor(private ps:AppService ,private ac : ActivatedRoute ,private routes: Router) { }
+  constructor(private ps:AppService ,private ac : ActivatedRoute ,private routes: Router,public toastr:ToastrManager) { }
   fileToUpload: File = null;
  
 
@@ -44,8 +45,9 @@ export class SignupComponent implements OnInit {
     this.ps.addUser(this.Infos,this.fileToUpload).subscribe(next=>this.ps.getUersJson().subscribe(res=>
     this.listUsers=res));
    
-    
+    this.toastr.successToastr('Compte ajouté','Félicitations')
     this.routes.navigate(['/login']);
+
 
     
   }

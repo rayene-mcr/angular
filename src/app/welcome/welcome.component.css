@@ -5,4 +5,11 @@
   .footer p {
     padding: 2%;
   }
- 
+  .btn {
+    transition-duration: 0.4s;
+  }
+  
+  .btn:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }

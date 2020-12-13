@@ -1,0 +1,95 @@
+<div class="allcontain">
+	<div class="header">
+			
+			<ul class="souklekraheb" >
+				<li>SOUK-LEKRAHEB</li>
+			</ul>
+			
+	</div>
+	<!-- Navbar Up -->
+	<nav class="topnavbar navbar-default topnav">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed toggle-costume" data-toggle="collapse" data-target="#upmenu" aria-expanded="false">
+					<span class="sr-only"> Toggle navigaion</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				
+			</div>	 
+		</div>
+		<div class="collapse navbar-collapse" id="upmenu">
+			<ul class="nav navbar-nav" id="navbarontop">
+				<li class="active"><a href="#" routerLink="/welcomeuser">HOME</a> </li>
+				<li>
+					<a href="#" routerLink="/viewuser">COLLECTION</a>
+				</li>
+				<li>
+					<a routerLink="/postuser">SELL</a>
+				</li>
+				<li>
+					<a >CONTACT</a>
+ 
+				</li>
+				
+			</ul>
+			<button style="margin-right: 30px;width: 120px;" routerLink="/login"><i class="fa fa-sign-out" aria-hidden="true"></i>LOGOUT</button>
+		</div>
+	</nav>
+</div>
+<div id="dropDownSelect1"></div>
+    <div class="wrapper" style="background-image: url('assets/images/contact.png');">
+        <div class="inner">
+            <div class="image-holder">
+                <img src="assets/image/send.png" alt="">
+            </div>
+<div class="allcontain">
+	<div class="contact">
+		<div class="newslettercontent">
+			<div class="leftside">
+				
+					<div class="contact-form">
+						<h1 style="margin-top: 20px;margin-left: 40px;">Contact Us</h1>
+							<div class="form-group group-coustume">
+								<form #f="ngForm" style="width:500px;">
+								<input type="text" class="form-control name-form" placeholder="Name" name="username" [(ngModel)]="Infos.username" #n="ngModel" required>
+								<div class="alert alert-danger" *ngIf="n.touched && n.errors?.required">Vous devez insérer un Username</div>
+								<input type="text" class="form-control email-form" name="email" placeholder="E-mail" [(ngModel)]="Infos.emailAdress" #e="ngModel" required>
+								<div class="alert alert-danger" *ngIf="e.touched && e.errors?.required">Vous devez insérer un email</div>
+								<input type="text" class="form-control subject-form" placeholder="Subject" name="subject" [(ngModel)]="Infos.subject" #s="ngModel" required>
+								<div class="alert alert-danger" *ngIf="s.touched && s.errors?.required">Vous devez insérer un Objet</div>
+								<input type="text" class="form-control subject-form" placeholder="Mail" name="mail" [(ngModel)]="Infos.mail" #m="ngModel" required>
+								<div class="alert alert-danger" *ngIf="m.touched && m.errors?.required">Vous devez insérer un Body</div>
+								<button type="submit" class="btn btn-default btn-submit" (click)="send()">Submit</button>
+							</form>
+							</div>
+					</div>
+			</div>
+			<div class="google-maps">
+			 <div id="googleMap"></div>
+
+			</div>
+		</div>
+
+	</div>
+</div>
+</div>
+</div>
+<div class="footer" >
+	<div class="copyright">
+		&copy; Copy right 2020 | <a href="#">Privacy </a>| <a href="#">Policy</a>
+	</div>
+	<div class="atisda">
+		 Designed by <a href="http://www.rayen.net/">Mechergui - Rayen </a> 
+	</div>
+</div>
+		
+		
+
+
+
+
+
+
+

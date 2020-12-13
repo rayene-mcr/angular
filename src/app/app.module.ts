@@ -22,6 +22,9 @@ import { ViewuserchildComponent } from './viewuserchild/viewuserchild.component'
 import { PostuserComponent } from './postuser/postuser.component';
 import { ListusersComponent } from './listusers/listusers.component';
 import { SignupComponent } from './signup/signup.component';
+import { ContactComponent } from './contact/contact.component';
+import { FeedbackComponent } from './feedback/feedback.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 
 
@@ -40,7 +43,10 @@ import { SignupComponent } from './signup/signup.component';
     ViewuserchildComponent,
     PostuserComponent,
     ListusersComponent,
-    SignupComponent
+    SignupComponent,
+    ContactComponent,
+    FeedbackComponent,
+    NotfoundComponent
 
 
   ],

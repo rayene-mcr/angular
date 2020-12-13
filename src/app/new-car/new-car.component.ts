@@ -17,12 +17,15 @@ export class NewCarComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
 
-  sendNotifIncrement(){
+  sendNotifIncrement(Cars:cars){
+    Cars.quantity++;
     this.increment.emit(this.Cars);
   }
 
-  sendNotifDisrement(){
+  sendNotifDisrement(Cars:cars){
+    Cars.quantity--;
     this.discrement.emit(this.Cars);
   }
 

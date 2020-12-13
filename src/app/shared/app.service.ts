@@ -18,6 +18,7 @@ export class AppService {
   urlCars : string="http://localhost:3000/cars"
   urlUsers : string="http://localhost:3000/users"
   urlBuyers : string="http://localhost:3000/buyers"
+  urlMail : string="http://localhost:3000/mail"
 
   constructor(private http : HttpClient) { }
   getCarsJson():Observable<cars[]>{
@@ -80,8 +81,15 @@ export class AppService {
                           addBuyer(Buyer : buyer):Observable<buyer>{
                             return this.http.post<buyer>(this.urlBuyers,Buyer);
                           }
-                          getBuyersJson():Observable<buyer[]>{
-                            return this.http.get<buyer[]>(this.urlBuyers);
+                          
+
+                          addMail(Infos : infos):Observable<infos>{
+                            return this.http.post<infos>(this.urlMail,Infos);
                           }
+              
+                          getMailsJson():Observable<infos[]>{
+                  
+                            return this.http.get<infos[]>(this.urlMail);
+                                }
                   
 }

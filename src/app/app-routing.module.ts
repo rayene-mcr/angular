@@ -2,8 +2,11 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './auth.guard';
 import { BuyComponent } from './buy/buy.component';
+import { ContactComponent } from './contact/contact.component';
+import { FeedbackComponent } from './feedback/feedback.component';
 import { ListusersComponent } from './listusers/listusers.component';
 import { LoginComponent } from './login/login.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 import { PostComponent } from './post/post.component';
 import { PostuserComponent } from './postuser/postuser.component';
 import { SignupComponent } from './signup/signup.component';
@@ -26,7 +29,10 @@ const routes: Routes = [
   {path:"view",component:ViewComponent},
   {path:"post",component:PostComponent},
   {path:"updatecars/:id",component:UpdatecarComponent},
-  {path:"buy/:id",component:BuyComponent}
+  {path:"buy/:id",component:BuyComponent},
+  {path:"contact",component:ContactComponent},
+  {path:"feedback",component:FeedbackComponent},
+  {path:'**',component:NotfoundComponent}
   
   
 

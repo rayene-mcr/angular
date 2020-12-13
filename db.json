@@ -18,18 +18,6 @@
   },
   "cars": [
     {
-      "url": "car2.jpg",
-      "name": "Porsche",
-      "immatriculation": "40",
-      "puissance": "7 cv",
-      "kilometrage": "3000",
-      "annee": "1958",
-      "prix": "400000",
-      "city": "Jendouba",
-      "quantity": 0,
-      "id": 4
-    },
-    {
       "url": "car7.jpg",
       "name": "Aston Martin",
       "immatriculation": "100",
@@ -54,18 +42,6 @@
       "id": 7
     },
     {
-      "url": "car4.jpg",
-      "name": "Mercedes",
-      "immatriculation": "77",
-      "puissance": "6 cv ",
-      "kilometrage": "1000000",
-      "annee": "1687",
-      "prix": "100000",
-      "city": "Sfax",
-      "quantity": "1",
-      "id": 8
-    },
-    {
       "url": "car5.jpg",
       "name": "Porsche",
       "immatriculation": "56",
@@ -78,28 +54,76 @@
       "id": 9
     },
     {
-      "url": "car8.jpg",
-      "name": "othtst",
-      "immatriculation": "45",
-      "puissance": "44",
-      "kilometrage": "55",
-      "annee": "455",
-      "prix": "4",
-      "city": "Lee",
+      "url": "car9.jpg",
+      "name": "Bmw Série 1",
+      "immatriculation": "200",
+      "puissance": "7 ",
+      "kilometrage": "70000",
+      "annee": "2019",
+      "prix": "70000",
+      "city": "Tunis",
+      "quantity": "1",
+      "id": 10
+    },
+    {
+      "url": "car10.jpg",
+      "name": "Mercedes Classe E",
+      "immatriculation": "201",
+      "puissance": "9 ",
+      "kilometrage": "80000",
+      "annee": "2020",
+      "prix": "120000",
+      "city": "Nabeul",
       "quantity": "1",
       "id": 11
     },
     {
-      "url": "car8.jpg",
-      "name": "BMW",
-      "immatriculation": "153",
-      "puissance": "7",
-      "kilometrage": "5",
-      "annee": "2020",
-      "prix": "90 000",
-      "city": "jiji",
+      "url": "car11.jpg",
+      "name": "Polo 7",
+      "immatriculation": "163",
+      "puissance": "4",
+      "kilometrage": "100000",
+      "annee": "2011",
+      "prix": "250000",
+      "city": "Jendouba",
+      "quantity": "1",
+      "id": 12
+    },
+    {
+      "url": "car12.jpg",
+      "name": "Clio 4",
+      "immatriculation": "199",
+      "puissance": "5",
+      "kilometrage": "90000",
+      "annee": "2018",
+      "prix": "350000",
+      "city": "Tunis",
       "quantity": "1",
       "id": 13
+    },
+    {
+      "url": "car13.jpg",
+      "name": "404 Bachée",
+      "immatriculation": "23",
+      "puissance": "3",
+      "kilometrage": "900000",
+      "annee": "1960",
+      "prix": "100000",
+      "city": "Beja",
+      "quantity": "1",
+      "id": 14
+    },
+    {
+      "url": "car14.jpg",
+      "name": "4L",
+      "immatriculation": "20",
+      "puissance": "3",
+      "kilometrage": "525485",
+      "annee": "1966",
+      "prix": "5000",
+      "city": "Hammamet",
+      "quantity": "1",
+      "id": 15
     }
   ],
   "users": [
@@ -126,6 +150,54 @@
       "role": "user",
       "url": "haythem.png",
       "id": 4
+    },
+    {
+      "firstName": "Kaies",
+      "lastName": "saied",
+      "username": "Kaies saied",
+      "cin": "00000000",
+      "emailAdress": "kais.saied@gmail.com",
+      "password": "0000",
+      "confirmpassword": "0000",
+      "role": "admin",
+      "url": "kais.png",
+      "id": 5
+    },
+    {
+      "firstName": "Cristiano",
+      "lastName": "Ronaldo",
+      "username": "Cristiano Ronaldo",
+      "cin": "02565165",
+      "emailAdress": "cristiano.ronaldo@yahoo.com",
+      "password": "0000",
+      "confirmpassword": "0000",
+      "role": "user",
+      "url": "cristiano.png",
+      "id": 6
+    },
+    {
+      "firstName": "Khmayes",
+      "lastName": "Boubtan",
+      "username": "Khmayes Boubtan",
+      "cin": "02561686",
+      "emailAdress": "khmayes.boubtan@wataneya.tn",
+      "password": "0000",
+      "confirmpassword": "0000",
+      "role": "user",
+      "url": "khmayes.png",
+      "id": 7
+    },
+    {
+      "firstName": "Taher",
+      "lastName": "Belakhdher",
+      "username": "Taher Belakhdher",
+      "cin": "02656215",
+      "emailAdress": "taher.belakdher@esprit.tn",
+      "password": "0000",
+      "confirmpassword": "0000",
+      "role": "user",
+      "url": "taher.png",
+      "id": 8
     }
   ],
   "buyers": [
@@ -171,6 +243,29 @@
       "adresse": "kkkk",
       "ville": "zzzze",
       "Travail": "Avocat",
+      "id": 5
+    }
+  ],
+  "mail": [
+    {
+      "username": "Mechergui Rayen",
+      "emailAdress": "rayne.mechergui@yahoo.com",
+      "subject": "Avis",
+      "mail": "Très bon travail",
+      "id": 3
+    },
+    {
+      "username": "Haythem Mechergui",
+      "emailAdress": "haythem.mechergui@esprit.tn",
+      "subject": "Avis",
+      "mail": "J'ai bien aimé ce concept",
+      "id": 4
+    },
+    {
+      "username": "Cristiano Ronaldo",
+      "emailAdress": "cristiano.ronaldo@yahoo.com",
+      "subject": "Opinion",
+      "mail": "I Really like your products , i'm looking forward to buy one of these cars !",
       "id": 5
     }
   ]

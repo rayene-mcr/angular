@@ -11,5 +11,7 @@ export class infos{
     password:string;
     confirmpassword:number;
     role:string;
+    subject:String;
+    mail:String;
     
 }

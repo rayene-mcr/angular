@@ -61,7 +61,7 @@ msg;
 
         }
         else if(uname != res[i].firstName && p != res[i].password ){
-          this.toastr.errorToastr('Login failed','Oops');
+         this.msg='Veuillez vérifier vos informations'
         }
       }
     });
